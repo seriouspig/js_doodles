@@ -20,9 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
     strength1.textContent = knight.strength
     health1.textContent = knight.health
 
+    var faceNumber = 1;
+
     var button = document.getElementById('changeFace')
     button.onclick = function() {
-        document.getElementById("face").src="images/face2.jpg";
+        if (faceNumber < 3) {
+            faceNumber ++
+            document.getElementById("face").src=`images/face${faceNumber}.jpg`;
+        }
+        else {
+            faceNumber = 1
+            document.getElementById("face").src=`images/face${faceNumber}.jpg`;
+        }
+        
     }
     
 
